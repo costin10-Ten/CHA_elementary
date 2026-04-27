@@ -30,6 +30,37 @@
 }
 .filterBtn:hover { background: var(--color-primary-light); color: var(--color-primary-dark); border-color: var(--color-primary); }
 
+.filterActive {
+  background: var(--color-primary) !important;
+  color: var(--paper) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 3px 3px 0 var(--color-primary-dark);
+}
+
+.filterCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  margin-left: var(--sp-2);
+  background: rgba(255,255,255,.25);
+  border-radius: var(--r-pill);
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.filterActive .filterCount { background: rgba(255,255,255,.3); }
+.filterBtn:not(.filterActive) .filterCount { background: var(--color-primary-light); color: var(--color-primary-dark); }
+
+.resultCount {
+  font-size: var(--fs-small);
+  color: var(--ink-3);
+  margin-bottom: var(--sp-5) !important;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -5,10 +5,11 @@ import { useState } from "react";
 import styles from "./Header.module.css";
 
 const NAV_ITEMS = [
-  { href: "/knowledge", label: "知識文章" },
-  { href: "/game",      label: "闖關遊戲" },
-  { href: "/experiment",label: "實驗模擬" },
-  { href: "/badges",    label: "我的徽章" },
+  { href: "/knowledge",    label: "知識文章" },
+  { href: "/game",         label: "闖關遊戲" },
+  { href: "/experiment",   label: "實驗模擬" },
+  { href: "/lesson-plans", label: "教案下載" },
+  { href: "/badges",       label: "我的徽章" },
 ];
 
 export default function Header() {
