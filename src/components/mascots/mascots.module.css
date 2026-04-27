@@ -1,0 +1,23 @@
+.mascot {
+  display: inline-block;
+  user-select: none;
+}
+
+.bob {
+  animation: ka-mascot-bob 2.4s ease-in-out infinite;
+}
+
+.blinkable {
+  animation: ka-blink 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.wave {
+  animation: ka-wave 0.8s ease-in-out 3;
+  transform-origin: 80% 90%;
+}
+
+/* Slide-in on first load */
+.slideIn {
+  animation: ka-slide-in var(--dur-slow) var(--ease-back) both;
+}

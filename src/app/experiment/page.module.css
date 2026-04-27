@@ -1,0 +1,40 @@
+.page { min-height: 100dvh; }
+
+.header { display: flex; align-items: center; gap: var(--sp-5); margin-bottom: var(--sp-6); }
+.header h1 { margin-bottom: var(--sp-2) !important; }
+.subtitle { font-size: var(--fs-lead); color: var(--ink-2); margin: 0 !important; }
+
+.warning {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  background: #FFF8D6;
+  border: 2.5px solid var(--accent-yellow);
+  border-radius: var(--r-lg);
+  box-shadow: 3px 3px 0 #C8A000;
+  font-size: var(--fs-body);
+  color: var(--ink);
+  margin-bottom: var(--sp-6);
+}
+
+.warning span { font-size: var(--fs-h3); color: #C8A000; flex-shrink: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-5); }
+
+.expCard { display: flex; flex-direction: column; gap: var(--sp-3); }
+
+.cardMeta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-2); }
+
+.cardInfo { display: flex; gap: var(--sp-3); font-size: var(--fs-caption); color: var(--ink-3); font-weight: 500; }
+
+.expTitle { font-family: var(--font-rounded); font-size: var(--fs-h3); font-weight: 700; color: var(--ink); }
+
+.expDesc { font-size: var(--fs-body); color: var(--ink-2); line-height: 1.6; flex: 1; margin: 0 !important; }
+
+.materials { font-size: var(--fs-small); color: var(--ink-3); padding: var(--sp-3); background: var(--paper-2); border-radius: var(--r-md); border: var(--stroke-1); }
+
+@media (max-width: 767px) {
+  .grid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; text-align: center; }
+}

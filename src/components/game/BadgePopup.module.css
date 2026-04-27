@@ -1,0 +1,114 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(26, 24, 20, .55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-5);
+  animation: ka-fade-up var(--dur-fast) ease both;
+  backdrop-filter: blur(3px);
+}
+
+.popup {
+  position: relative;
+  background: var(--paper);
+  border: var(--stroke-3);
+  border-radius: var(--r-xl);
+  box-shadow: 6px 6px 0 var(--line);
+  padding: var(--sp-7) var(--sp-6);
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  animation: ka-scale-in var(--dur-slow) var(--ease-back) both;
+  overflow: hidden;
+}
+
+.confettiWrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confettiPiece {
+  position: absolute;
+  top: -12px;
+  animation: ka-confetti-fall var(--dur-celebrate) var(--ease-in) forwards;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.preTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 !important;
+  letter-spacing: .02em;
+}
+
+.badgeIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-coral));
+  border: var(--stroke-3);
+  box-shadow: 4px 4px 0 var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ka-badge-pop var(--dur-celebrate) var(--ease-back) both;
+}
+
+.badgeEmoji { font-size: 48px; line-height: 1; }
+
+.body { margin-bottom: var(--sp-5); }
+
+.badgeName {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: var(--sp-3) !important;
+}
+
+.badgeDesc {
+  font-size: var(--fs-lead);
+  color: var(--ink-2);
+  margin: 0 !important;
+}
+
+.mascotRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--sp-5);
+}
+
+.actions { display: flex; justify-content: center; }
+
+.skipBtn {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  background: var(--paper-2);
+  border: var(--stroke-1);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--dur-fast);
+}
+.skipBtn:hover { background: var(--paper-2); color: var(--ink); }

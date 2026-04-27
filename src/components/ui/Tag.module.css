@@ -1,0 +1,19 @@
+.base {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-caption);
+  font-weight: 500;
+  font-family: var(--font-body);
+  line-height: 1;
+  border: 1.5px solid currentColor;
+}
+
+.tag  { border-radius: var(--r-sm);   padding: 3px 8px; }
+.chip { border-radius: var(--r-pill); padding: 5px 12px; font-size: var(--fs-small); }
+
+.blue   { color: var(--color-primary);       background: var(--color-primary-light); }
+.green  { color: var(--color-secondary-dark); background: var(--color-secondary-light); }
+.yellow { color: #8B6800;                     background: #FFF8D6; }
+.coral  { color: #B94800;                     background: #FFE8D8; }
+.pink   { color: #C0005A;                     background: #FFE6F1; }
+.cyan   { color: #007A80;                     background: #D8FAFB; }

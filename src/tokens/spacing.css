@@ -1,0 +1,24 @@
+:root {
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  --r-sm:   6px;
+  --r-md:   12px;
+  --r-lg:   20px;
+  --r-xl:   28px;
+  --r-pill: 999px;
+
+  --stroke-1: 1.5px solid var(--line);
+  --stroke-2: 2.5px solid var(--line);
+  --stroke-3: 3.5px solid var(--line);
+
+  --shadow-flat: 4px 4px 0 var(--line);
+  --shadow-soft: 0 4px 12px rgba(26, 24, 20, .08);
+}

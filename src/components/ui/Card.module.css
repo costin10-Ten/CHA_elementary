@@ -1,0 +1,30 @@
+.card {
+  background: var(--paper);
+  border: var(--stroke-2);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-flat);
+  padding: var(--sp-5);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+
+.card.clickable { cursor: pointer; }
+
+.card:hover,
+.card.clickable:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--line);
+}
+
+.accent {
+  border-color: var(--color-primary);
+  box-shadow: 4px 4px 0 var(--color-primary-dark);
+}
+.accent:hover { box-shadow: 6px 6px 0 var(--color-primary-dark); }
+
+.featured {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary-dark);
+  box-shadow: 4px 4px 0 var(--color-primary-dark);
+}
+.featured:hover { box-shadow: 6px 6px 0 var(--color-primary-dark); }

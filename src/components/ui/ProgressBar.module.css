@@ -1,0 +1,32 @@
+.wrap { display: flex; flex-direction: column; gap: var(--sp-1); }
+
+.labelRow { display: flex; justify-content: space-between; align-items: baseline; }
+.label { font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
+.value { font-size: var(--fs-caption); font-weight: 700; color: var(--ink-3); }
+
+.track {
+  width: 100%;
+  background: var(--paper-2);
+  border: var(--stroke-1);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+
+.sm { height: 8px; }
+.md { height: 12px; }
+.lg { height: 18px; }
+
+.fill {
+  height: 100%;
+  border-radius: var(--r-pill);
+  transform-origin: left center;
+  transform: scaleX(var(--pct));
+}
+
+.animated {
+  animation: ka-progress-fill var(--dur-slow) var(--ease-out) both;
+}
+
+.primary   { background: var(--color-primary); }
+.secondary { background: var(--color-secondary); }
+.warning   { background: var(--accent-yellow); }

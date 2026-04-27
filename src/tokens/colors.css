@@ -1,0 +1,32 @@
+:root {
+  /* Primary – CHA blue */
+  --color-primary:       #1F7FB8;
+  --color-primary-dark:  #155F8A;
+  --color-primary-light: #D5EAF6;
+
+  /* Secondary – CHA green */
+  --color-secondary:       #A6C83A;
+  --color-secondary-dark:  #7FA124;
+  --color-secondary-light: #EAF2C8;
+
+  /* Accents */
+  --accent-yellow: #FFD93D;
+  --accent-pink:   #FF6B9D;
+  --accent-coral:  #FF8A5C;
+  --accent-cyan:   #5EE9F0;
+
+  /* Neutrals */
+  --ink:     #1A1814;
+  --ink-2:   #3A352D;
+  --ink-3:   #6A6256;
+  --paper:   #FBF7EA;
+  --paper-2: #F2EDDC;
+  --surface: #FFFFFF;
+  --line:    #2A2620;
+
+  /* Semantic */
+  --success: #A6C83A;
+  --warning: #FFD93D;
+  --danger:  #E63946;
+  --info:    #1F7FB8;
+}

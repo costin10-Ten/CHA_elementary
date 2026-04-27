@@ -1,0 +1,160 @@
+.card {
+  background: var(--paper);
+  border: var(--stroke-2);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-flat);
+  padding: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--dur-base), box-shadow var(--dur-base);
+}
+
+.correct { animation: ka-correct-flash .9s ease-out; }
+.wrong   { animation: ka-shake var(--dur-base) ease-out; }
+
+.question { margin-bottom: var(--sp-5); }
+
+.questionText {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface);
+  border: var(--stroke-2);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--fs-body);
+  font-family: var(--font-body);
+  color: var(--ink);
+  transition: background var(--dur-fast), border-color var(--dur-fast), transform var(--dur-fast);
+  min-height: 56px;
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.option:hover:not(.optDisabled) {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.optDisabled { cursor: default; }
+
+.optLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--paper-2);
+  border: 1.5px solid var(--line);
+  font-weight: 700;
+  font-size: var(--fs-small);
+  flex-shrink: 0;
+}
+
+.optText { flex: 1; font-weight: 500; }
+
+.checkmark {
+  font-size: 18px;
+  color: var(--color-secondary-dark);
+  font-weight: 700;
+}
+
+.optCorrect {
+  background: var(--color-secondary-light) !important;
+  border-color: var(--color-secondary) !important;
+  box-shadow: 2px 2px 0 var(--color-secondary-dark) !important;
+}
+.optCorrect .optLabel { background: var(--color-secondary); color: white; border-color: var(--color-secondary-dark); }
+
+.optWrong {
+  background: #FFE8EA !important;
+  border-color: var(--danger) !important;
+  box-shadow: 2px 2px 0 #9B1C22 !important;
+  opacity: .8;
+}
+
+.optReveal {
+  background: var(--color-secondary-light) !important;
+  border-color: var(--color-secondary) !important;
+}
+
+/* ── Feedback section ────────────────────────────── */
+.feedback {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+  padding: var(--sp-5);
+  border-radius: var(--r-lg);
+  border: var(--stroke-2);
+  margin-bottom: var(--sp-4);
+  animation: ka-fade-up var(--dur-slow) var(--ease-out) both;
+}
+
+.feedback_correct { background: var(--color-secondary-light); border-color: var(--color-secondary); }
+.feedback_wrong   { background: var(--paper-2); border-color: var(--line); }
+
+.feedbackMascots { display: flex; gap: var(--sp-2); flex-shrink: 0; align-items: flex-end; }
+
+.feedbackText { flex: 1; }
+
+.feedbackHeadline {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-h3);
+  font-weight: 800;
+  margin-bottom: var(--sp-2) !important;
+}
+.feedback_correct .feedbackHeadline { color: var(--color-secondary-dark); }
+.feedback_wrong   .feedbackHeadline { color: var(--ink-2); }
+
+.explanation { font-size: var(--fs-body); color: var(--ink); margin-bottom: var(--sp-2) !important; }
+
+.hint {
+  font-size: var(--fs-small);
+  color: var(--ink-3);
+  background: white;
+  border-radius: var(--r-md);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px dashed var(--ink-3);
+  margin: 0 !important;
+}
+
+/* ── Confetti particles ──────────────────────────── */
+.particles {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  top: -20px;
+  animation: ka-confetti-fall 1.6s var(--ease-in) forwards;
+}
+
+.nextRow { display: flex; justify-content: flex-end; }
+
+@media (max-width: 480px) {
+  .card { padding: var(--sp-4); }
+  .feedback { flex-direction: column; }
+  .feedbackMascots { flex-direction: row; }
+}
